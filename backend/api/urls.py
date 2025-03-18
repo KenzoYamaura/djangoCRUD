@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/user/', User.as_view(), name="usuariosAPI"),
     path('api/user/<int:id>',User.as_view(), name="usuarioDetalhe"),
     path('api/login/', Login.as_view(), name="loginAPI"),
+    path('api/GetDadosUsuarioLogado', GetDadosUsuarioLogado.as_view(), name="GetDadosUserLogado"),
     path('home/', home, name="home"),
     path('login/', login, name="login"),
     path('criarAluno/', criarAluno, name="criarAluno"),

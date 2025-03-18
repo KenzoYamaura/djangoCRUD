@@ -9,7 +9,7 @@ async function enviarFormulario(evento){
     const valor = url.split("/")
     const id = valor[valor.length - 1]
     let resposta;
-
+    
     if (id){
         resposta = await apiFetch(`/api/user/${id}`, "PUT", {username: nome, password: senha}, {"X-CSRFToken": csrf})
     }else{
